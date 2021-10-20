@@ -1,0 +1,15 @@
+image: "hanguo_backend_new"
+
+stages:
+  - pull
+
+develop-pull:
+  stage: pull
+  only:
+    - develop
+  tags:
+    - tags-hanguo_backend_new
+  script:
+    - cd /home/wwwroot/backend_develop
+    - git pull
+
